@@ -2,10 +2,10 @@
 require_once 'CFPropertyList/CFPropertyList.php';
 
 // Load custom certificates and keys
-$root_ca_cert = file_get_contents('root_ca.crt');
-$intermediate_ca_cert = file_get_contents('intermediate_ca.crt');
-$server_cert = file_get_contents('server.crt');
-$server_key = file_get_contents('server.key');
+$root_ca_cert = file_get_contents('certs/root_ca.crt');
+$intermediate_ca_cert = file_get_contents('certs/intermediate_ca.crt');
+$server_cert = file_get_contents('certs/server.crt');
+$server_key = file_get_contents('certs/server.key');
 
 // Check if this is a POST request with activation-info
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['activation-info'])) {
